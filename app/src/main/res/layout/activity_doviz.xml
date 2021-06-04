@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5B6EFFDC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="Currency Transactions"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="44dp"
+            android:textStyle="italic" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#00AFFF"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:id="@+id/main_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#B086EADF"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/first_linear"
+                    android:layout_width="365dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_firstConversion"
+                        android:layout_width="215dp"
+                        android:layout_height="wrap_content"
+                        android:ems="5"
+                        android:hint="Currency"
+                        android:inputType="number"
+                        android:textColorHint="@color/teal_700" />
+
+                    <Spinner
+                        android:id="@+id/spinner_firstConversion"
+                        android:layout_width="133dp"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/second_linear"
+                    android:layout_width="365dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_secondConversion"
+                        android:layout_width="215dp"
+                        android:layout_height="wrap_content"
+                        android:ems="5"
+                        android:hint="Currency"
+                        android:inputType="none|number"
+                        android:textColorHint="@color/teal_700" />
+
+                    <Spinner
+                        android:id="@+id/spinner_secondConversion"
+                        android:layout_width="133dp"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/exchange" />
+    </LinearLayout>
+
+
+</RelativeLayout>
